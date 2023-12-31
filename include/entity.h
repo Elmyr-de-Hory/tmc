@@ -116,6 +116,21 @@ typedef struct {
     u8 b3 : 1; // 0x80
 } PACKED SpritePriority;
 
+typedef enum {
+    INTERACTION_NONE            = 0x00,
+    INTERACTION_TALK            = 0x01,
+    INTERACTION_FUSE            = 0x02,
+    INTERACTION_OPEN_CHEST      = 0x03,
+    INTERACTION_UNUSED          = 0x04,
+    INTERACTION_USE_SMALL_KEY   = 0x05,
+    INTERACTION_USE_BIG_KEY     = 0x06,
+    INTERACTION_TALK_MINISH     = 0x07,
+    INTERACTION_LIFT_SHOP_ITEM  = 0x08,
+    INTERACTION_CHECK           = 0x09,
+    INTERACTION_DROP_PEDESTAL   = 0x0A,
+    INTERACTION_NULL            = 0xFF,
+} InteractionType;
+
 #define GENERIC_ENTITY_FIELDS \
     /*0x68*/ union SplitHWord field_0x68; \
     /*0x6a*/ union SplitHWord field_0x6a;  \

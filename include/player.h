@@ -632,21 +632,6 @@ void ModRupees(s32 delta);
 void ModBombs(s32 delta);
 
 typedef enum {
-    INTERACTION_NONE            = 0x00,
-    INTERACTION_TALK            = 0x01,
-    INTERACTION_FUSE            = 0x02,
-    INTERACTION_OPEN_CHEST      = 0x03,
-    INTERACTION_UNUSED          = 0x04,
-    INTERACTION_USE_SMALL_KEY   = 0x05,
-    INTERACTION_USE_BIG_KEY     = 0x06,
-    INTERACTION_TALK_MINISH     = 0x07,
-    INTERACTION_LIFT_SHOP_ITEM  = 0x08,
-    INTERACTION_CHECK           = 0x09,
-    INTERACTION_DROP_PEDESTAL   = 0x0A,
-    INTERACTION_NULL            = 0xFF,
-} InteractionType;
-
-typedef enum {
     R_ACTION_NONE,
     R_ACTION_CANCEL,
     R_ACTION_DROP,
@@ -733,7 +718,7 @@ void ResetPossibleInteraction();
 void AddInteractableFuser(Entity*, u32);
 void AddInteractableSmallKeyLock(Entity*);
 s32 AddInteractableBossDoor(Entity*);
-s32 AddInteractableObject(Entity*, u32, u32);
+s32 AddInteractableObject(Entity*, InteractionType, u32);
 void RemoveInteractableObject(Entity*);
 s32 GetInteractableObjectIndex();
 void sub_08078AC0(u32, u32, u32);
