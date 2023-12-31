@@ -1286,35 +1286,35 @@ InteractableObject* sub_080784E4(void) {
 }
 
 void AddInteractableWhenBigObject(Entity* ent) {
-    AddInteractableObject(ent, 1, 0);
+    AddInteractableObject(ent, INTERACTION_TALK, 0);
 }
 
 void AddInteractableWhenBigFuser(Entity* ent, KinstoneId kinstoneId) {
-    AddInteractableObject(ent, 1, kinstoneId);
+    AddInteractableObject(ent, INTERACTION_TALK, kinstoneId);
 }
 
 void AddInteractableFuser(Entity* ent, KinstoneId kinstoneId) {
-    AddInteractableObject(ent, 2, kinstoneId);
+    AddInteractableObject(ent, INTERACTION_FUSE, kinstoneId);
 }
 
 void AddInteractableAsMinishObject(Entity* ent) {
-    AddInteractableObject(ent, 7, 0);
+    AddInteractableObject(ent, INTERACTION_TALK_MINISH, 0);
 }
 
 void AddInteractableAsMinishFuser(Entity* ent, KinstoneId kinstoneId) {
-    AddInteractableObject(ent, 7, kinstoneId);
+    AddInteractableObject(ent, INTERACTION_TALK_MINISH, kinstoneId);
 }
 
 void AddInteractableCheckableObject(Entity* ent) {
-    AddInteractableObject(ent, 9, 0);
+    AddInteractableObject(ent, INTERACTION_CHECK, 0);
 }
 
 void AddInteractablePedestal(Entity* ent) {
-    AddInteractableObject(ent, 10, 0);
+    AddInteractableObject(ent, INTERACTION_DROP_PEDESTAL, 0);
 }
 
 void AddInteractableSmallKeyLock(Entity* ent) {
-    AddInteractableObject(ent, 5, 0);
+    AddInteractableObject(ent, INTERACTION_USE_SMALL_KEY, 0);
 }
 
 s32 AddInteractableShopItem(Entity* ent) {
